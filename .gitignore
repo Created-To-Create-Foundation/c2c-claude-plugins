@@ -1,8 +1,8 @@
 node_modules/
 *.log
 .DS_Store
-# dane użytkownika (nigdy w repo)
-tokens.json
+# dane użytkownika (nigdy w repo); tokeny Google żyją poza repo (~/.c2c-slides lub CLAUDE_PLUGIN_DATA)
+.c2c-slides/
 oauth-client.local.json
 # artefakty pracy
 plugins/*/server/coverage/
