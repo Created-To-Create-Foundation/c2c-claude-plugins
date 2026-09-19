@@ -13,7 +13,7 @@ Wymagania: Claude Desktop (Cowork) lub Claude Code, konto Google, [Node.js 20+](
 W Claude wpisz kolejno:
 
 ```
-/plugin marketplace add GITHUB_ORG/c2c-claude-plugins
+/plugin marketplace add Created-To-Create-Foundation/c2c-claude-plugins
 /plugin install c2c-slides@c2c
 ```
 

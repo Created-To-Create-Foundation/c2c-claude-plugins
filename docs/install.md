@@ -10,12 +10,12 @@ Instrukcja dla osób, które nie programują. Zajmie około 5 minut.
 
 ## Krok 1 i 2. Dodaj marketplace C2C i zainstaluj plugin
 
-**Claude Desktop (Cowork):** Ustawienia → Plugins → przycisk **Add** → **Add marketplace** → wpisz `GITHUB_ORG/c2c-claude-plugins` (lub pełny adres `https://github.com/GITHUB_ORG/c2c-claude-plugins`). Na liście pojawi się „C2C Slides”; kliknij **Install**. Plugin działa w zadaniach Cowork, nie w zwykłym czacie.
+**Claude Desktop (Cowork):** Ustawienia → Plugins → przycisk **Add** → **Add marketplace** → wpisz `Created-To-Create-Foundation/c2c-claude-plugins` (lub pełny adres `https://github.com/Created-To-Create-Foundation/c2c-claude-plugins`). Na liście pojawi się „C2C Slides”; kliknij **Install**. Plugin działa w zadaniach Cowork, nie w zwykłym czacie.
 
 **Claude Code (terminal):** w oknie rozmowy wpisz kolejno:
 
 ```
-/plugin marketplace add GITHUB_ORG/c2c-claude-plugins
+/plugin marketplace add Created-To-Create-Foundation/c2c-claude-plugins
 /plugin install c2c-slides@c2c
 ```
 
@@ -54,6 +54,6 @@ Automatyczne. Claude sprawdza marketplace przy uruchomieniu i pobiera nową wers
 
 **Zapomniałem, gdzie jest prezentacja.** Powiedz „pokaż moje prezentacje C2C”; narzędzie wypisze pliki, które utworzyło.
 
-**Nie mogę zainstalować pluginu w firmowym Claude.** Administrator mógł ograniczyć marketplace’y. Poproś o dopuszczenie marketplace „GITHUB_ORG/c2c-claude-plugins” albo użyj ścieżki awaryjnej: skill `c2c-slides-pptx` (plik .pptx), który da się wgrać także w claude.ai (Ustawienia → Możliwości → Skille).
+**Nie mogę zainstalować pluginu w firmowym Claude.** Administrator mógł ograniczyć marketplace’y. Poproś o dopuszczenie marketplace „Created-To-Create-Foundation/c2c-claude-plugins” albo użyj ścieżki awaryjnej: skill `c2c-slides-pptx` (plik .pptx), który da się wgrać także w claude.ai (Ustawienia → Możliwości → Skille).
 
 **Chcę odłączyć Google.** Powiedz „odłącz C2C Slides od Google” albo usuń dostęp na https://myaccount.google.com/permissions.
