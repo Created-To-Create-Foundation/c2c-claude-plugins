@@ -1,0 +1,32 @@
+{
+  "name": "@c2c/slides-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server: brand-enforced Google Slides decks for Created to Create",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build:template": "tsx src/template/build-template.ts",
+    "dev": "tsx src/index.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@resvg/resvg-wasm": "^2.6.2",
+    "jszip": "^3.10.2",
+    "pptxgenjs": "^4.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}

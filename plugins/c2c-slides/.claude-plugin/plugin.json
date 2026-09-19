@@ -1,0 +1,15 @@
+{
+  "name": "c2c-slides",
+  "version": "0.1.0",
+  "description": "Prezentacje Google Slides w stylu Created to Create: szablon, tone of voice, wykresy i diagramy w palecie marki.",
+  "author": {
+    "name": "Created to Create",
+    "email": "lukasz.siminski@createdtocreate.pl",
+    "url": "https://createdtocreate.pl"
+  },
+  "homepage": "https://createdtocreate.pl",
+  "license": "MIT",
+  "keywords": ["google-slides", "presentations", "brand", "c2c"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

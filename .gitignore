@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.DS_Store
+# dane użytkownika (nigdy w repo)
+tokens.json
+oauth-client.local.json
+# artefakty pracy
+plugins/*/server/coverage/
+plugins/*/dist-skill/
+tmp/

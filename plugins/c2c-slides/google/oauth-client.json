@@ -1,0 +1,10 @@
+{
+  "installed": {
+    "client_id": "343612073645-gqj3h5fvk82psrl8fs3rvhij4b456v2k.apps.googleusercontent.com",
+    "client_secret": "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",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "redirect_uris": ["http://127.0.0.1"]
+  },
+  "$comment": "Klient OAuth typu Desktop projektu Google Cloud C2C, tylko scope drive.file. Zgodnie z dokumentacją Google sekret aplikacji desktopowej nie jest traktowany jako tajny. Instrukcja: docs/google-cloud-setup.md"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "c2c",
+  "description": "Narzędzia Claude dla społeczności Created to Create: prezentacje Google Slides w stylu C2C i kolejne pluginy.",
+  "owner": {
+    "name": "Created to Create",
+    "email": "lukasz.siminski@createdtocreate.pl",
+    "url": "https://createdtocreate.pl"
+  },
+  "plugins": [
+    {
+      "name": "c2c-slides",
+      "displayName": "C2C Slides",
+      "description": "Tworzy i edytuje prezentacje Google Slides w stylu Created to Create: spójny szablon, tone of voice, wykresy i diagramy w palecie marki. Loguje się do Twojego własnego konta Google (tylko pliki utworzone przez narzędzie).",
+      "source": "./plugins/c2c-slides",
+      "category": "productivity",
+      "keywords": ["google-slides", "prezentacje", "brand", "c2c", "created-to-create"],
+      "homepage": "https://createdtocreate.pl"
+    }
+  ]
+}
