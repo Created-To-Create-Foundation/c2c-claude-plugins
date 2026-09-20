@@ -55,7 +55,8 @@ Budujesz prezentacje Google Slides, których wygląd wymusza szablon Created to 
 
 ## Gdy Google nie działa
 
-- Błąd `admin_policy_enforced` lub „Access blocked”: administrator Google Workspace użytkownika blokuje aplikacje zewnętrzne. Powiedz o tym wprost i zaproponuj: (a) prywatne konto Google, (b) prośbę do administratora o zaufanie aplikacji „C2C Slides”, (c) plik .pptx przez `c2c_render_pptx`, który użytkownik wgra na Dysk i otworzy w Slides.
+- Błąd `org_internal` („Dostęp zablokowany: aplikacji można używać tylko w organizacji”): użytkownik wybrał w przeglądarce inne konto niż fundacyjne. Logowanie działa wyłącznie kontem @createdtocreate.pl; poproś o ponowną próbę z właściwym kontem (w oknie Google „Użyj innego konta”).
+- Błąd `admin_policy_enforced` lub inna blokada: powiedz o tym wprost i zaproponuj plik .pptx przez `c2c_render_pptx`, który użytkownik wgra na Dysk i otworzy w Slides.
 - Brak narzędzi `c2c_*` w sesji (serwer MCP nie wystartował): zobacz skill `c2c-slides-pptx`.
 
 ## Czego nie robić

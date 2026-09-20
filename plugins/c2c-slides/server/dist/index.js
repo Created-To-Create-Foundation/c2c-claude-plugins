@@ -46448,7 +46448,8 @@ async function login(opts = {}) {
         const err = url2.searchParams.get("error");
         if (err) {
           res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" }).end(page("Logowanie przerwane", `Google zwr\xF3ci\u0142o b\u0142\u0105d: ${escapeHtml(err)}. Mo\u017Cesz zamkn\u0105\u0107 t\u0119 kart\u0119.`));
-          throw new Error(`Google OAuth: ${err}${err === "admin_policy_enforced" ? " (administrator Twojego Google Workspace blokuje t\u0119 aplikacj\u0119; zobacz docs/install.md, sekcja \u201EKonto firmowe\u201D)" : ""}`);
+          const hint = err === "org_internal" ? " Logowanie dzia\u0142a tylko kontem Google w domenie createdtocreate.pl. W przegl\u0105darce wybierz konto fundacji (nie prywatne ani firmowe) i spr\xF3buj ponownie." : err === "admin_policy_enforced" ? " Administrator Google Workspace blokuje t\u0119 aplikacj\u0119 dla tego konta; zaloguj si\u0119 kontem fundacji @createdtocreate.pl." : "";
+          throw new Error(`Google OAuth: ${err}.${hint}`);
         }
         const code = url2.searchParams.get("code");
         if (!code) {
@@ -54254,7 +54255,7 @@ async function renderPptx(spec, outPath) {
 }
 
 // src/index.ts
-var VERSION2 = "0.1.0";
+var VERSION2 = "0.1.1";
 var server = new McpServer({ name: "c2c-slides", version: VERSION2 });
 var ok = (data) => ({ content: [{ type: "text", text: typeof data === "string" ? data : JSON.stringify(data, null, 2) }] });
 var fail = (e) => {

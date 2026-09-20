@@ -9,7 +9,7 @@ Decyzja z 2026-09-19 (po analizie trzech podejść; raporty w `docs/research/`):
 | Bez konektorów claude.ai | Połączenie z Google żyje w serwerze MCP pluginu (stdio, lokalnie), z OAuth PKCE w przeglądarce użytkownika. |
 | Instalacja raz, aktualizacje same | Marketplace `.claude-plugin/marketplace.json` w repo; Claude odświeża go automatycznie. Bundle `server/dist` jest commitowany, użytkownik nic nie buduje. |
 | Nietechniczny użytkownik | Dwie komendy `/plugin`, jedno logowanie Google, Node.js jako jedyna zależność. |
-| Każdy na swoim koncie Google | Klient OAuth typu Desktop z jednym scope `drive.file`: bez weryfikacji zakresów, bez limitu użytkowników, tokeny trwałe. |
+| Każdy na swoim koncie Google fundacji | Klient OAuth typu Desktop w projekcie organizacji `createdtocreate.pl`, typ odbiorców Wewnętrzny, jeden scope `drive.file`: bez weryfikacji, bez limitów, tokeny trwałe; obce konta odrzuca Google (`org_internal`). Decyzja 2026-09-20: członkowie mają konta fundacji. |
 | Spójność mechaniczna | Szablon z masterem i layoutami; model widzi tylko typy slajdów (DeckSpec); tekst trafia do placeholderów i dziedziczy style; audyt resetuje nadpisania. |
 | Edycja zachowuje spójność | `c2c_update_slide` zmienia tylko tekst placeholderów; `c2c_audit_deck --fix` przywraca style; slajdy poza layoutami są raportowane do odtworzenia. |
 
@@ -42,7 +42,7 @@ Zmiana wyglądu = zmiana tokenów/layoutów + `npm run build:template` + `npm ru
 
 ## Ścieżki awaryjne
 
-- **Blokada admina Workspace** (`admin_policy_enforced`): własny klient OAuth użytkownika (`oauth-client.json` w katalogu danych) albo `.pptx`.
+- **Złe konto przy logowaniu** (`org_internal`): komunikat prowadzi do wyboru konta @createdtocreate.pl. **Inna blokada**: własny klient OAuth użytkownika (`oauth-client.json` w katalogu danych) albo `.pptx`.
 - **Brak pluginów** (claude.ai web, zablokowany firmowy Claude Code): skill `c2c-slides-pptx` jako `.zip` (`scripts/build-skill-zip.mjs`) z samodzielnym `render-pptx.js`; użytkownik wgrywa `.pptx` na Dysk i otwiera w Slides.
 - **Opcja na później:** zdalny serwer MCP hostowany przez C2C (działa jako custom connector w claude.ai). Odrzucona w v1 z powodu kosztu utrzymania i przechowywania tokenów użytkowników.
 

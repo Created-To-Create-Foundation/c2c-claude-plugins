@@ -102,7 +102,8 @@ export async function login(opts: LoginOptions = {}): Promise<LoginResult> {
         const err = url.searchParams.get("error");
         if (err) {
           res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" }).end(page("Logowanie przerwane", `Google zwróciło błąd: ${escapeHtml(err)}. Możesz zamknąć tę kartę.`));
-          throw new Error(`Google OAuth: ${err}${err === "admin_policy_enforced" ? " (administrator Twojego Google Workspace blokuje tę aplikację; zobacz docs/install.md, sekcja „Konto firmowe”)" : ""}`);
+          const hint = err === "org_internal" ? " Logowanie działa tylko kontem Google w domenie createdtocreate.pl. W przeglądarce wybierz konto fundacji (nie prywatne ani firmowe) i spróbuj ponownie." : err === "admin_policy_enforced" ? " Administrator Google Workspace blokuje tę aplikację dla tego konta; zaloguj się kontem fundacji @createdtocreate.pl." : "";
+          throw new Error(`Google OAuth: ${err}.${hint}`);
         }
         const code = url.searchParams.get("code");
         if (!code) { res.writeHead(400).end("Brak kodu."); return; }

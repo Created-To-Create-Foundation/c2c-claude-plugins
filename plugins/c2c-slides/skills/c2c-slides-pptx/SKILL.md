@@ -10,7 +10,7 @@ Ten sam szablon i te same typy slajdów co w pluginie, ale wynik to plik `.pptx`
 ## Kiedy używać
 
 1. W sesji nie ma narzędzi `c2c_*` (serwer MCP nie wystartował lub plugin jest zablokowany).
-2. `c2c_login` kończy się błędem „Access blocked” / `admin_policy_enforced`.
+2. `c2c_login` kończy się blokadą, której nie rozwiązuje wybór konta fundacji @createdtocreate.pl.
 3. Użytkownik chce po prostu plik do wysłania, bez zapisywania na Dysku.
 
 Jeśli narzędzia `c2c_*` są dostępne, użyj `c2c_render_pptx` zamiast tej instrukcji.

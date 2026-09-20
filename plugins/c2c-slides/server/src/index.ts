@@ -18,7 +18,7 @@ import { tokens } from "./brand/tokens.js";
 import { LAYOUTS } from "./brand/layouts.js";
 import { dataDir } from "./paths.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 
 const server = new McpServer({ name: "c2c-slides", version: VERSION });
 

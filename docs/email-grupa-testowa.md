@@ -11,7 +11,7 @@ Zanim udostępnimy je całej społeczności, prosimy Was o test. Poniżej instru
 ## Czego potrzebujecie
 
 1. Aplikacji Claude na komputer (Mac lub Windows) z trybem Cowork, na planie Pro, Max, Team lub Enterprise.
-2. Konta Google (prywatnego Gmail lub firmowego).
+2. Konta Google fundacji (adres @createdtocreate.pl). Prywatny Gmail ani konto innej firmy nie zadziałają.
 3. Programu Node.js. To niewidoczne środowisko, w którym działa narzędzie. Pobierzcie instalator „LTS” ze strony https://nodejs.org/ i przejdźcie przez kreator, klikając „Dalej”.
 
 ## Instalacja
@@ -25,7 +25,7 @@ Zanim udostępnimy je całej społeczności, prosimy Was o test. Poniżej instru
 
 1. Otwórzcie kartę Cowork i zacznijcie nowe zadanie.
 2. Napiszcie: „Połącz mnie z Google dla C2C Slides”.
-3. Otworzy się przeglądarka. Wybierzcie swoje konto Google i zaakceptujcie jedno uprawnienie: dostęp do plików utworzonych przez tę aplikację. Narzędzie nie widzi pozostałych plików na Waszym Dysku.
+3. Otworzy się przeglądarka. Wybierzcie konto fundacji (@createdtocreate.pl); jeśli przeglądarka pokazuje inne konto, kliknijcie „Użyj innego konta”. Zaakceptujcie jedno uprawnienie: dostęp do plików utworzonych przez tę aplikację. Narzędzie nie widzi pozostałych plików na Waszym Dysku.
 4. Karta pokaże „Połączono z Google”. Wróćcie do Claude.
 
 Logowanie zapamiętuje się na Waszym komputerze. Powtarzacie je tylko po zmianie komputera lub odwołaniu dostępu.
@@ -38,9 +38,9 @@ Napiszcie w tym samym zadaniu Cowork na przykład:
 
 Claude zaproponuje konspekt. Po Waszym „OK” utworzy prezentację i poda link do Google Slides. Potem możecie prosić o zmiany zwykłymi zdaniami: „Zmień tytuł trzeciego slajdu”, „Dodaj wykres z tymi danymi”, „Zamień drugi slajd na cytat”, „Wyeksportuj do PDF”. Możecie też podać link do swojej starszej prezentacji i poprosić o jej poprawienie: Claude otworzy okno wyboru pliku Google, w którym ją wskażecie.
 
-## Konto firmowe Google
+## Gdy Google pisze „Dostęp zablokowany”
 
-Jeśli przy logowaniu pojawi się komunikat „Access blocked” lub informacja, że administrator Waszej organizacji musi sprawdzić aplikację, oznacza to blokadę aplikacji zewnętrznych w Waszym Google Workspace. Najprościej zalogować się prywatnym kontem Google. Możecie też poprosić Claude o plik PowerPoint zamiast Google Slides; wgracie go na Dysk i otworzycie w Slides.
+Komunikat „aplikacji można używać tylko w organizacji” oznacza, że w przeglądarce wybrano inne konto niż fundacyjne. Wróćcie do okna Google, kliknijcie „Użyj innego konta” i zalogujcie się adresem @createdtocreate.pl.
 
 ## O co prosimy
 

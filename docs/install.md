@@ -5,7 +5,7 @@ Instrukcja dla osób, które nie programują. Zajmie około 5 minut.
 ## Czego potrzebujesz
 
 1. **Claude** w jednej z wersji: aplikacja Claude Desktop z trybem Cowork (Mac lub Windows) albo Claude Code w terminalu. Plan Pro, Max, Team lub Enterprise.
-2. **Konto Google** (prywatne Gmail albo firmowe Google Workspace).
+2. **Konto Google fundacji** w domenie `createdtocreate.pl`. Narzędzie nie działa z prywatnym Gmailem ani z kontami innych firm.
 3. **Node.js** w wersji 20 lub nowszej. To środowisko, w którym działa narzędzie. Pobierz instalator „LTS” ze strony https://nodejs.org/ i przejdź przez kreator, klikając „Dalej”. Sprawdzenie: w terminalu (Mac: Terminal, Windows: PowerShell) wpisz `node -v`; powinna pojawić się wersja, np. `v22.11.0`.
 
 ## Krok 1 i 2. Dodaj marketplace C2C i zainstaluj plugin
@@ -25,7 +25,7 @@ Wybierz zakres „User” (dla siebie, we wszystkich projektach). Po instalacji 
 
 Napisz do Claude: „Połącz mnie z Google dla C2C Slides”. Otworzy się przeglądarka:
 
-1. Wybierz swoje konto Google.
+1. Wybierz konto fundacji (@createdtocreate.pl). Jeśli w przeglądarce jesteś zalogowany na inne konto Google, kliknij „Użyj innego konta”.
 2. Zobaczysz ekran zgody z nazwą aplikacji i jednym uprawnieniem: „Wyświetlanie i zarządzanie plikami na Dysku Google utworzonymi przez tę aplikację lub otwartymi w niej”. Kliknij „Zezwól” (lub „Kontynuuj”).
 3. Karta pokaże „Połączono z Google”. Wróć do Claude.
 
@@ -48,7 +48,7 @@ Automatyczne. Claude sprawdza marketplace przy uruchomieniu i pobiera nową wers
 
 ## Rozwiązywanie problemów
 
-**„Access blocked” albo „Administrator Twojej organizacji musi sprawdzić tę aplikację”.** Twoje konto Google Workspace ma blokadę aplikacji zewnętrznych. Trzy wyjścia: (1) zaloguj się prywatnym kontem Google, (2) poproś administratora o dodanie aplikacji „C2C Slides” do zaufanych (identyfikator klienta podaje właściciel narzędzia), (3) poproś Claude o plik PowerPoint zamiast Google Slides; wgrasz go na Dysk i otworzysz w Slides.
+**„Dostęp zablokowany: aplikacji można używać tylko w organizacji” (błąd 403: org_internal).** W przeglądarce wybrano inne konto niż fundacyjne. Wróć do okna Google, kliknij „Użyj innego konta” i zaloguj się adresem @createdtocreate.pl. Jeśli nie masz takiego konta, napisz do Oliwii lub Łukasza.
 
 **Narzędzia `c2c_*` nie pojawiają się.** Sprawdź `node -v` (wymagane 20+). Uruchom `/reload-plugins`. W Claude Code: `/mcp` pokaże status serwera „c2c-slides” i ewentualny błąd.
 
