@@ -16,6 +16,7 @@ Czas: około 20 minut.
 
 1. „Google Auth Platform” → „Branding”: nazwa aplikacji **C2C Slides**, e-mail pomocy `kontakt@createdtocreate.pl`, logo (opcjonalnie, `plugins/c2c-slides/brand/logos/logo-mark-square-navy-512px.png`), strona główna `https://createdtocreate.pl`, polityka prywatności `https://createdtocreate.pl/polityka-prywatnosci`, regulamin `https://createdtocreate.pl/regulamin`, autoryzowana domena `createdtocreate.pl`.
 2. „Odbiorcy” (Audience): typ **Zewnętrzny**. Po zapisaniu kliknij **„Opublikuj aplikację”** (status: W produkcji). Bez tego tokeny użytkowników wygasają po 7 dniach.
+   Uwaga przy reużyciu projektu strony: jeśli typ jest **Wewnętrzny**, każdy spoza organizacji Cloud dostanie „Dostęp zablokowany … Błąd 403: org_internal” (zdarzyło się 2026-09-20 przy pierwszym teście). Typ zmienia się w tej samej sekcji; logowanie na stronie pozostaje ograniczone do domeny przez kod aplikacji.
 3. „Zakresy dostępu do danych” (Data Access): dodaj wyłącznie `https://www.googleapis.com/auth/drive.file`. Nie dodawaj `presentations`, `spreadsheets` ani `drive`; każdy z nich uruchamia weryfikację i limity.
 4. Opcjonalnie: „Weryfikacja marki” (Brand verification), by na ekranie zgody pojawiła się nazwa i logo C2C zamiast identyfikatora projektu. Trwa 2 do 3 dni robocze, wymaga potwierdzenia domeny w Search Console.
 
